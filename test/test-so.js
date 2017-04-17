@@ -7,14 +7,41 @@ dBconfig.loadDatabase();
 const core = require('../index.js');
 
 describe('mOSHostname', function() {
-    it('get mOSHostname', function(done) {
-        let data = {};
-        data['moduleFunction'] = "mOSHostname";
-        core.run(data).then(result => {
-            console.log(result);
-            done();
-        }).catch(error => {
-            done(error);
-        });
+  it('get mOSHostname', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mOSHostname";
+    core.run(data).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
     });
+  });
+});
+
+
+describe('mWindowsMemory', function() {
+  it('get mWindowsMemory', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mWindowsMemory";
+    core.run(data).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
+
+describe('mWindowsCPU', function() {
+  it('get mWindowsCPU', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mWindowsCPU";
+    core.run(data, dBconfig).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
 });
