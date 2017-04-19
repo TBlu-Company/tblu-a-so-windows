@@ -58,3 +58,16 @@ describe('mWindowsFSLogic', function() {
     });
   });
 });
+
+describe('mWindowsFSFisic', function() {
+  it('get mWindowsFSFisic', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mWindowsFSFisic";
+    core.run(data).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
