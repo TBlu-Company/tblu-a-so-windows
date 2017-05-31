@@ -20,18 +20,18 @@ const core = require('../index.js');
 //   });
 // });
 //
-describe('mWindowsCPU', function() {
-  it('get mWindowsCPU', function(done) {
-    let data = {};
-    data['moduleFunction'] = "mWindowsCPU";
-    core.run(data, dBconfig).then(result => {
-      console.log(result);
-      done();
-    }).catch(error => {
-      done(error);
-    });
-  });
-});
+// describe('mWindowsCPU', function() {
+//   it('get mWindowsCPU', function(done) {
+//     let data = {};
+//     data['moduleFunction'] = "mWindowsCPU";
+//     core.run(data, dBconfig).then(result => {
+//       console.log(result);
+//       done();
+//     }).catch(error => {
+//       done(error);
+//     });
+//   });
+// });
 //
 // describe('mWindowsFSLogic', function() {
 //   it('get mWindowsFSLogic', function(done) {
@@ -103,6 +103,20 @@ describe('mWindowsNetworkIO', function() {
   it('get mWindowsNetworkIO', function(done) {
     let data = {};
     data['moduleFunction'] = "mWindowsNetworkIO";
+    core.run(data, dBconfig).then(result => {
+      console.log(result);
+      done();
+    }).catch(error => {
+      done(error);
+    });
+  });
+});
+
+
+describe('mWindowsDiskIO', function() {
+  it('get mWindowsDiskIO', function(done) {
+    let data = {};
+    data['moduleFunction'] = "mWindowsDiskIO";
     core.run(data, dBconfig).then(result => {
       console.log(result);
       done();
