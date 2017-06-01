@@ -104,7 +104,7 @@ describe('mWindowsNetworkIO', function() {
     let data = {};
     data['moduleFunction'] = "mWindowsNetworkIO";
     core.run(data, dBconfig).then(result => {
-      console.log(result);
+      // console.log(result);
       done();
     }).catch(error => {
       done(error);
@@ -118,7 +118,7 @@ describe('mWindowsDiskIO', function() {
     let data = {};
     data['moduleFunction'] = "mWindowsDiskIO";
     core.run(data, dBconfig).then(result => {
-      console.log(result);
+      // console.log(result);
       done();
     }).catch(error => {
       done(error);
